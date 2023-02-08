@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  background-color: black;
+  min-height: 150vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  background-color: rgb(61, 61, 180);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  min-height: 80px;
+}
+
+.logo {
+  width: 100px;
+  height: 40px;
+  background-color: teal;
+  border-radius: 20px 0 20px 0;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  height: 100%;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  padding: 0 20px;
+  transition: all 0.5s ease;
+}
+
+.nav-link:hover {
+  color: rgb(61, 61, 180);
+  background-color: white;
+  text-decoration: underline;
+}
+
+.burger-button {
+  width: 30px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-image: url(./images/burger-button.svg);
+  transition: opacity 0.4s ease;
+  position: relative;
+  display: none;
+}
+
+.burger-button_opened {
+  background-image: url(./images/burger-button-black.svg);
+}
+
+.burger-button:hover {
+  opacity: 0.6;
+}
+
+.sign-in-button {
+  padding: 10px 31px;
+  background-color: teal;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 10px;
+  transition: opacity 0.4s ease;
+  width: 100px;
+}
+
+.sign-in-button:hover {
+  opacity: 0.6;
+}
+
+.sign-in-button:active {
+  background-color: rgb(5, 52, 52);
+  transform: scale(1.1);
+}
+
+.sign-in-button_burger {
+  display: none;
+}
+
+.content {
+  background-color: bisque;
+  height: calc(150vh - 180px);
+}
+
+.footer {
+  width: 100%;
+  background-color: rgb(61, 61, 180);
+  min-height: 100px;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_active {
+  display: flex;
+}
+
+.modal-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 60%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.modal-title {
+  text-align: center;
+}
+
+.modal-input {
+  margin-top: 10px;
+  border: 1px solid rgb(61, 61, 180);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.modal-label {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-button {
+  margin-top: 10px;
+  border: none;
+  padding: 10px;
+  background-color: teal;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+
+.modal-button:hover {
+  opacity: 0.7;
+}
+
+.modal-close-button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  background-image: url(./images/cross-icon.svg);
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.burger-menu {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: column-reverse;
+    justify-content: center;
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-self: flex-end;
+    background-color: white;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navigation_opened {
+    display: flex;
+  }
+
+  .burger-button {
+    display: block;
+    position: fixed;
+    right: 20px;
+  }
+
+  .nav-list {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-link {
+    color: black;
+  }
+}

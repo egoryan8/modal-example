@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Modal</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="logo"></div>
+        <nav class="navigation">
+          <div class="burger-menu">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="" class="nav-link">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Мои проекты</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Обо мне</a>
+              </li>
+            </ul>
+            <button class="sign-in-button">Войти</button>
+          </div>
+        </nav>
+        <button class="burger-button"></button>
+      </header>
+      <main class="content"></main>
+      <footer class="footer"></footer>
+      <div class="modal">
+        <form class="modal-form">
+          <h2 class="modal-title">Войдите в аккаунт</h2>
+          <input class="modal-input" type="text" placeholder="Логин" />
+          <input class="modal-input" type="password" placeholder="Пароль" />
+          <label class="modal-label">
+            <input class="modal-checkbox" type="checkbox" id="check" />
+            Запомнить меня
+          </label>
+          <button class="modal-button" type="submit">Войти</button>
+          <button class="modal-close-button"></button>
+        </form>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
