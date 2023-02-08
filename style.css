@@ -113,6 +113,13 @@
   min-height: 100px;
 }
 
+.github-link {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin: 30px;
+}
+
 .modal {
   position: fixed;
   width: 100%;
